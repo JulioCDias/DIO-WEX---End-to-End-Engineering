@@ -170,9 +170,45 @@ switch (diaDaSemana) // Iniciando o SWITCH com a variável diaDaSemana
         break; // Saindo do SWITCH
 }
 
+#endregion
 
+#region Operadores Lógicos
+// Operadores Lógicos
+//Os operadores lógicos em C# são usados para combinar ou inverter condições booleanas. Os principais operadores lógicos são:
+// 1. AND (&&) - Retorna verdadeiro se ambas as condições forem verdadeiras.
+// 2. OR (||) - Retorna verdadeiro se pelo menos uma das condições for verdadeira.
+// 3. NOT (!) - Inverte o valor lógico de uma condição, tornando verdadeiro em falso e vice-versa.
+// Exemplo de uso do operador AND (&&)
+bool ehMaiorDeIdade = true; // Declarando uma variável booleana para verificar se é maior de idade
+bool temCarteiraDeHabilitacao = true; // Declarando uma variável booleana para verificar se tem carteira de habilitação
+if (ehMaiorDeIdade && temCarteiraDeHabilitacao) // Verificando se ambas as condições são verdadeiras
+{
+    Console.WriteLine("Você pode dirigir."); // Mensagem se ambas as condições forem verdadeiras
+}
+else
+{
+    Console.WriteLine("Você não pode dirigir."); // Mensagem se pelo menos uma condição for falsa
+}
+// Exemplo de uso do operador OR (||)
+bool ehAluno = true; // Declarando uma variável booleana para verificar se é aluno
+bool temDesconto = false; // Declarando uma variável booleana para verificar se tem desconto
+if (ehAluno || temDesconto) // Verificando se pelo menos uma das condições é verdadeira
+{
+    Console.WriteLine("Você tem direito a desconto."); // Mensagem se pelo menos uma condição for verdadeira
+}
+else
+{
+    Console.WriteLine("Você não tem direito a desconto."); // Mensagem se ambas as condições forem falsas
+}
 
-
-
-
+// Exemplo de uso do operador NOT (!)
+bool estaChovendoo = false; // Declarando uma variável booleana para verificar se está chovendo
+if (!estaChovendoo) // Verificando se não está chovendo
+{
+    Console.WriteLine("Você pode sair sem guarda-chuva."); // Mensagem se não estiver chovendo
+}
+else
+{
+    Console.WriteLine("Leve um guarda-chuva."); // Mensagem se estiver chovendo
+}
 #endregion
