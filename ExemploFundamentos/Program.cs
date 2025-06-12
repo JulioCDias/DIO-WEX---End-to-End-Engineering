@@ -1,6 +1,7 @@
 ﻿using ExemploFundamentos.Models; // Importando o namespace que contém a classe Pessoa
 // Início do programa principal
-
+#region Declaração de variáveis e tipos primitivos
+// Declaração de variáveis e tipos primitivos
 Pessoa pessoa = new Pessoa(); // Instanciando a classe Pessoa
 pessoa.Nome = "João"; // Atribuindo o nome
 pessoa.Idade = 30; // Atribuindo a idade
@@ -40,3 +41,138 @@ Console.WriteLine($"Número Negativo: {numeroNegativo}"); // Exibindo o valor da
 DateTime dataAtual = DateTime.Now; // Declarando uma variável do tipo DateTime para armazenar a data e hora atual
 Console.WriteLine($"Data e Hora Atual: {dataAtual}"); // Exibindo a data e hora atual
                                                       // Fim do programa principal
+#endregion
+// Aguardando o usuário pressionar uma tecla antes de fechar o console
+
+#region Tipos de Operadores em C#
+// Operadores Aritméticos
+int a = 10; // sinal de = é o operador de atribuição
+int b = 5; // variavel b recebe o valor 5
+int soma = a + b; // Soma
+Console.WriteLine($"Soma: {soma}"); // Exibindo o resultado da soma
+soma = soma + 5; // Adicionando 5 à soma
+soma += 5; // Outra forma de adicionar 5 à soma
+Console.WriteLine($"Soma após adição: {soma}"); // Exibindo o resultado após a adição
+//Convertendo tipo de variaveis
+int numeroInteiro = 10; // Declarando uma variável do tipo inteiro
+double numeroDouble = (double)numeroInteiro; // Convertendo inteiro para double
+Console.WriteLine($"Número convertido para double: {numeroDouble}"); // Exibindo o número convertido
+//Usando convert
+string numeroString = "123"; // Declarando uma variável do tipo string com um número
+int numeroConvertido = Convert.ToInt32(numeroString); // Convertendo string para inteiro
+Console.WriteLine($"Número convertido de string para inteiro: {numeroConvertido}"); // Exibindo o número convertido
+                                                                                    // Diferenca entre convert e parse
+/* a diferença entre Convert e Parse é que o Convert pode lidar com valores nulos e tipos diferentes,
+enquanto o Parse é mais específico para conversão de strings para tipos primitivos. 
+O Convert retorna um valor padrão se a conversão falhar, enquanto o Parse lança uma exceção.
+alem de do Convert não quebrar o programa se for passados valores Nullos ele converte o null para zero,
+já o Parse lança uma exceção se for passado um valor nulo ou inválido.
+ */
+// maneira segura de converter
+string a1 = "456"; // Declarando uma variável do tipo string com um número
+int a2; //Variavel declarada mas nao inicializada
+int.TryParse(a1, out a2); // Tentando converter string para inteiro de forma segura
+if (a2 != 0) // Verificando se a conversão foi bem-sucedida
+{
+    Console.WriteLine($"Número convertido de string para inteiro de forma segura: {a2}"); // Exibindo o número convertido
+}
+else
+{
+    Console.WriteLine("Conversão falhou, valor inválido ou nulo."); // Mensagem de falha na conversão
+}
+//Convertendo para string
+int numeroParaString = 456; // Declarando uma variável do tipo inteiro
+string numeroComoString = numeroParaString.ToString(); // Convertendo inteiro para string
+Console.WriteLine($"Número convertido para string: {numeroComoString}"); // Exibindo o número convertido
+// Casting Impliccito
+int numeroInt = 100; // Declarando uma variável do tipo inteiro
+double numeroDoubleCasting = numeroInt; // Casting implícito de int para double
+Console.WriteLine($"Número após casting implícito para double: {numeroDoubleCasting}"); // Exibindo o número após o casting
+// Ordem dos Operadores
+double item1 = 4 / 2 + 2;
+Console.WriteLine($"Resultado da expressão 4 / 2 + 2: {item1}"); // Exibindo o resultado da expressão
+/*
+A ordem dos operadores em C# segue as regras matemáticas padrão:
+1. Parênteses: () - Operações dentro de parênteses são realizadas primeiro.
+2. Exponenciação: ** - Operações de exponenciação são realizadas em seguida.
+3. Multiplicação e Divisão: * / % - Operações de multiplicação, divisão e módulo são realizadas da esquerda para a direita.
+4. Adição e Subtração: + - - Operações de adição e subtração são realizadas por último, também da esquerda para a direita.
+*/
+#endregion
+
+#region  Operadores Condicionais
+// Operadores Condicionais
+/*
+O Os peradores consicionais em C# são usados para mudar o fluxo de execução do programa com base em condições lógicas.
+Os principais operadores condicionais são:
+1. IF - Executa um bloco de código se a condição for verdadeira.
+2. ELSE - Executa um bloco de código se a condição do IF for falsa.
+3. ELSE IF - Permite verificar múltiplas condições, executando o bloco de código correspondente à primeira condição verdadeira.
+4. SWITCH - Avalia uma expressão e executa um bloco de código correspondente ao valor da expressão.
+5. CASE - Define um bloco de código a ser executado quando o valor da expressão no SWITCH corresponder ao valor especificado.
+*/
+// Exemplo de uso do IF e ELSE
+int idade = 18; // Declarando uma variável do tipo inteiro para idade
+if (idade >= 18) // Verificando se a idade é maior ou igual a 18
+{
+    Console.WriteLine("Você é maior de idade."); // Mensagem se a condição for verdadeira
+}
+else // Se a condição for falsa
+{
+    Console.WriteLine("Você é menor de idade."); // Mensagem se a condição for falsa
+}
+// Exemplo de uso do ELSE IF
+int nota = 75; // Declarando uma variável do tipo inteiro para nota
+
+if (nota >= 90) // Verificando se a nota é maior ou igual a 90
+{
+    Console.WriteLine("Aprovado com louvor!"); // Mensagem se a condição for verdadeira
+}
+else if (nota >= 70) // Verificando se a nota é maior ou igual a 70
+{
+    Console.WriteLine("Aprovado!"); // Mensagem se a condição for verdadeira
+}
+else if (nota >= 50) // Verificando se a nota é maior ou igual a 50
+{
+    Console.WriteLine("Recuperação!"); // Mensagem se a condição for verdadeira
+}
+else // Se nenhuma das condições anteriores for verdadeira
+{
+    Console.WriteLine("Reprovado!"); // Mensagem se todas as condições forem falsas
+}
+// Exemplo de uso do SWITCH
+int diaDaSemana = 3; // Declarando uma variável do tipo inteiro para o dia da semana
+switch (diaDaSemana) // Iniciando o SWITCH com a variável diaDaSemana
+{
+    case 1: // Se diaDaSemana for 1
+        Console.WriteLine("Domingo"); // Mensagem para domingo
+        break; // Saindo do SWITCH
+    case 2: // Se diaDaSemana for 2
+        Console.WriteLine("Segunda-feira"); // Mensagem para segunda-feira
+        break; // Saindo do SWITCH
+    case 3: // Se diaDaSemana for 3
+        Console.WriteLine("Terça-feira"); // Mensagem para terça-feira
+        break; // Saindo do SWITCH
+    case 4: // Se diaDaSemana for 4
+        Console.WriteLine("Quarta-feira"); // Mensagem para quarta-feira
+        break; // Saindo do SWITCH
+    case 5: // Se diaDaSemana for 5
+        Console.WriteLine("Quinta-feira"); // Mensagem para quinta-feira
+        break; // Saindo do SWITCH
+    case 6: // Se diaDaSemana for 6
+        Console.WriteLine("Sexta-feira"); // Mensagem para sexta-feira
+        break; // Saindo do SWITCH
+    case 7: // Se diaDaSemana for 7
+        Console.WriteLine("Sábado"); // Mensagem para sábado
+        break; // Saindo do SWITCH
+    default: // Se nenhuma das condições anteriores for verdadeira
+        Console.WriteLine("Dia inválido!"); // Mensagem de erro para dia inválido
+        break; // Saindo do SWITCH
+}
+
+
+
+
+
+
+#endregion
