@@ -1,4 +1,5 @@
-﻿using ExemploFundamentos.Models; // Importando o namespace que contém a classe Pessoa
+﻿using ExemploFundamentos.Common.Models;
+// Importando o namespace que contém a classe Pessoa
 // Início do programa principal
 #region Declaração de variáveis e tipos primitivos
 // Declaração de variáveis e tipos primitivos
@@ -42,7 +43,6 @@ DateTime dataAtual = DateTime.Now; // Declarando uma variável do tipo DateTime 
 Console.WriteLine($"Data e Hora Atual: {dataAtual}"); // Exibindo a data e hora atual
                                                       // Fim do programa principal
 #endregion
-// Aguardando o usuário pressionar uma tecla antes de fechar o console
 
 #region Tipos de Operadores em C#
 // Operadores Aritméticos
@@ -387,5 +387,4 @@ while (continuarr) // Iniciando o loop WHILE
             break; // Saindo do SWITCH
     }
 }
-
 #endregion

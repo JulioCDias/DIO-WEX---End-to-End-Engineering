@@ -1,5 +1,4 @@
-
-namespace ExemploFundamentos.Models;
+namespace ExemploFundamentos.Common.Models;
 
 public class Calculadora
 {
