@@ -293,5 +293,99 @@ Console.WriteLine($"Contador após incremento: {contador}"); // Exibindo o valor
 contador--; // Decrementando o contador em 1
 Console.WriteLine($"Contador após decremento: {contador}"); // Exibindo o valor do contador após o decremento
 
+#endregion
+
+#region Estruturas de Repetição
+// Estruturas de Repetição
+// As estruturas de repetição em C# são usadas para executar um bloco de código várias vezes, com base em uma condição. As principais estruturas de repetição são:
+// 1. FOR - Executa um bloco de código um número específico de vezes.
+// 2. WHILE - Executa um bloco de código enquanto uma condição for verdadeira.
+// 3. DO WHILE - Executa um bloco de código pelo menos uma vez e, em seguida, continua enquanto uma condição for verdadeira.
+// 4. FOREACH - Itera sobre uma coleção ou array, executando um bloco de código para cada elemento.
+
+// Exemplo de uso do FOR
+// O loop FOR é usado para executar um bloco de código um número específico de vezes.
+// O for necessita de três partes:
+// 1. Inicialização: Define uma variável de controle e seu valor inicial.
+// 2. Condição: Verifica se a variável de controle atende a uma condição para continuar o loop.
+// 3. Incremento/Decremento: Atualiza a variável de controle após cada iteração.
+for (int contadorr = 0; contadorr < 10; contadorr++) // Iniciando o loop FOR com i começando em 0 e indo até 4
+{
+    Console.WriteLine($"Valor de i: {contadorr}"); // Exibindo o valor de i em cada iteração
+}
+//exemplo de uso de for com uma tabuada de multiplicação
+for (int i = 0; i <= 10; i++) // Loop para a tabuada de multiplicação de 1 a 10
+{
+    Console.WriteLine($"Tabuada do {i}:"); // Exibindo o título da tabuada
+    for (int j = 1; j <= 10; j++) // Loop interno para multiplicar i por j
+    {
+        Console.WriteLine($"{i} x {j} = {i * j}"); // Exibindo o resultado da multiplicação
+    }
+    Console.WriteLine(); // Linha em branco para separar as tabuadas
+}
+
+// Exemplo de uso do WHILE
+// O loop WHILE executa um bloco de código enquanto uma condição for verdadeira.
+int contadorWhile = 0; // Declarando uma variável do tipo inteiro para contador
+while (contadorWhile < 5) // Verificando se o contador é menor que 5
+{
+    Console.WriteLine($"Valor do contador: {contadorWhile}"); // Exibindo o valor do contador
+    contadorWhile++; // Incrementando o contador em 1
+}
+// Exemplo de uso do DO WHILE
+// O loop DO WHILE executa um bloco de código pelo menos uma vez e, em seguida, continua enquanto uma condição for verdadeira.
+int contadorDoWhile = 0; // Declarando uma variável do tipo inteiro para contador
+do // Iniciando o loop DO WHILE
+{
+    Console.WriteLine($"Valor do contador: {contadorDoWhile}"); // Exibindo o valor do contador
+    contadorDoWhile++; // Incrementando o contador em 1
+} while (contadorDoWhile < 5); // Verificando se o contador é menor que 5
+// Exemplo de uso do FOREACH
+// O loop FOREACH é usado para iterar sobre uma coleção ou array, executando um bloco de código para cada elemento.
+string[] frutas = { "Maçã", "Banana", "Laranja", "Uva" }; // Declarando um array de strings com nomes de frutas
+foreach (string fruta in frutas) // Iniciando o loop FOREACH para iterar sobre o array de frutas
+{
+    Console.WriteLine($"Fruta: {fruta}"); // Exibindo o nome da fruta em cada iteração
+}
+// posso interromper um loop com o comando break
+// Exemplo de uso do comando break
+for (int i = 0; i < 10; i++) // Loop para contar de 0 a 9
+{
+    if (i == 5) // Verificando se i é igual a 5
+    {
+        Console.WriteLine("Loop interrompido no valor 5."); // Mensagem de interrupção
+        break; // Interrompendo o loop
+    }
+    Console.WriteLine($"Valor de i: {i}"); // Exibindo o valor de i em cada iteração
+}
+//exemoplo de menu interativo com while
+bool continuarr = true; // Variável para controlar o loop
+while (continuarr) // Iniciando o loop WHILE
+{
+    Console.WriteLine("Menu:"); // Exibindo o menu
+    Console.WriteLine("1. Opção 1"); // Opção 1 do menu
+    Console.WriteLine("2. Opção 2"); // Opção 2 do menu
+    Console.WriteLine("3. Sair"); // Opção para sair do menu
+    Console.Write("Escolha uma opção: "); // Solicitando ao usuário que escolha uma opção
+
+    string escolha = Console.ReadLine(); // Lendo a entrada do usuário
+
+    switch (escolha) // Iniciando o SWITCH com a escolha do usuário
+    {
+        case "1": // Se a escolha for 1
+            Console.WriteLine("Você escolheu a Opção 1."); // Mensagem para a Opção 1
+            break; // Saindo do SWITCH
+        case "2": // Se a escolha for 2
+            Console.WriteLine("Você escolheu a Opção 2."); // Mensagem para a Opção 2
+            break; // Saindo do SWITCH
+        case "3": // Se a escolha for 3
+            continuarr = false; // Alterando a variável para sair do loop
+            Console.WriteLine("Saindo do menu..."); // Mensagem de saída do menu
+            break; // Saindo do SWITCH
+        default: // Se nenhuma das opções anteriores for escolhida
+            Console.WriteLine("Opção inválida! Tente novamente."); // Mensagem de erro para opção inválida
+            break; // Saindo do SWITCH
+    }
+}
 
 #endregion
