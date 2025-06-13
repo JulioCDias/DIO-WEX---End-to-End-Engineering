@@ -173,6 +173,7 @@ switch (diaDaSemana) // Iniciando o SWITCH com a variável diaDaSemana
 #endregion
 
 #region Operadores Lógicos
+
 // Operadores Lógicos
 //Os operadores lógicos em C# são usados para combinar ou inverter condições booleanas. Os principais operadores lógicos são:
 // 1. AND (&&) - Retorna verdadeiro se ambas as condições forem verdadeiras.
@@ -211,4 +212,86 @@ else
 {
     Console.WriteLine("Leve um guarda-chuva."); // Mensagem se estiver chovendo
 }
+#endregion
+
+#region  Operadores Aritimeticos e a Classe Math
+// Operadores Aritméticos e a Classe Math
+// Os operadores aritméticos em C# são usados para realizar operações matemáticas básicas. Os principais operadores aritméticos são:
+// 1. Adição (+) - Soma dois valores.
+// 2. Subtração (-) - Subtrai um valor de outro.
+// 3. Multiplicação (*) - Multiplica dois valores.
+// 4. Divisão (/) - Divide um valor por outro.
+// 5. Módulo (%) - Retorna o resto da divisão de um valor por outro.
+// 6. Incremento (++) - Aumenta o valor de uma variável em 1.
+// 7. Decremento (--) - Diminui o valor de uma variável em 1.
+// Exemplo de uso dos operadores aritméticos
+int x = 10; // Declarando uma variável do tipo inteiro
+int y = 5; // Declarando outra variável do tipo inteiro
+int _soma = x + y; // Usando o operador de adição
+int subtracao = x - y; // Usando o operador de subtração
+int multiplicacao = x * y; // Usando o operador de multiplicação
+int divisao = x / y; // Usando o operador de divisão
+int modulo = x % y; // Usando o operador de módulo
+Console.WriteLine($"Soma: {_soma}"); // Exibindo o resultado da soma
+Console.WriteLine($"Subtração: {subtracao}"); // Exibindo o resultado da subtração
+Console.WriteLine($"Multiplicação: {multiplicacao}"); // Exibindo o resultado da multiplicação
+Console.WriteLine($"Divisão: {divisao}"); // Exibindo o resultado da divisão
+Console.WriteLine($"Módulo: {modulo}"); // Exibindo o resultado do módulo
+// Exemplo de uso dos operadores de incremento e decremento
+x++; // Incrementando o valor de x em 1
+Console.WriteLine($"Valor de x após incremento: {x}"); // Exibindo o valor de x após o incremento
+y--; // Decrementando o valor de y em 1
+Console.WriteLine($"Valor de y após decremento: {y}"); // Exibindo o valor de y após o decremento
+// Usando a Classe Math para operações matemáticas avançadas
+double raizQuadrada = Math.Sqrt(25); // Calculando a raiz quadrada de 25
+Console.WriteLine($"Raiz quadrada de 25: {raizQuadrada}"); // Exibindo o resultado da raiz quadrada
+double potencia = Math.Pow(2, 3); // Calculando 2 elevado a 3
+Console.WriteLine($"2 elevado a 3: {potencia}"); // Exibindo o resultado da potência
+double valorAbsoluto = Math.Abs(-10.5); // Calculando o valor absoluto de -10.5
+Console.WriteLine($"Valor absoluto de -10.5: {valorAbsoluto}"); // Exibindo o resultado do valor absoluto
+double maiorValor = Math.Max(10, 20); // Encontrando o maior valor entre 10 e 20
+Console.WriteLine($"Maior valor entre 10 e 20: {maiorValor}"); // Exibindo o maior valor
+double menorValor = Math.Min(10, 20); // Encontrando o menor valor entre 10 e 20
+Console.WriteLine($"Menor valor entre 10 e 20: {menorValor}"); // Exibindo o menor valor
+double arredondado = Math.Round(3.14159, 2); // Arredondando o número 3.14159 para 2 casas decimais
+Console.WriteLine($"Número 3.14159 arredondado para 2 casas decimais: {arredondado}"); // Exibindo o número arredondado
+double teto = Math.Ceiling(3.14); // Arredondando para cima
+Console.WriteLine($"Número 3.14 arredondado para cima: {teto}"); // Exibindo o número arredondado para cima
+double piso = Math.Floor(3.99); // Arredondando para baixo
+Console.WriteLine($"Número 3.99 arredondado para baixo: {piso}"); // Exibindo o número arredondado para baixo
+double seno = Math.Sin(Math.PI / 2); // Calculando o seno de 90 graus (PI/2 radianos)
+Console.WriteLine($"Seno de 90 graus: {seno}"); // Exibindo o resultado do seno
+double cosseno = Math.Cos(Math.PI); // Calculando o cosseno de 180 graus (PI radianos)
+Console.WriteLine($"Cosseno de 180 graus: {cosseno}"); // Exibindo o resultado do cosseno
+double tangente = Math.Tan(Math.PI / 4); // Calculando a tangente de 45 graus (PI/4 radianos)
+Console.WriteLine($"Tangente de 45 graus: {tangente}"); // Exibindo o resultado da tangente
+// Exemplo de uso com classe externa
+
+Calculadora calc = new Calculadora(); // Instanciando a classe Calculadora
+double resultadoPotencia,
+    resultadoRaizQuadrada,
+    resultadoMultiplicação,
+    resultadoDivisao,
+    resultadoSoma,
+    resultadoSubtracao; // Declarando variáveis para armazenar os resultados de potência e raiz quadrada
+calc.Somar(5, 3, out resultadoSoma); // Chamando o método Somar da classe Calculadora
+Console.WriteLine($"Resultado da soma: {resultadoSoma}"); // Exibindo o resultado da soma
+calc.Subtrair(10, 4, out resultadoSubtracao); // Chamando o método Subtrair da classe Calculadora
+Console.WriteLine($"Resultado da subtração: {resultadoSubtracao}"); // Exibindo o resultado da subtração
+calc.Multiplicar(6, 7, out resultadoMultiplicação); // Chamando o método Multiplicar da classe Calculadora
+Console.WriteLine($"Resultado da multiplicação: {resultadoMultiplicação}"); // Exibindo o resultado da multiplicação
+calc.Dividir(20, 4, out resultadoDivisao); // Chamando o método Dividir da classe Calculadora
+Console.WriteLine($"Resultado da divisão: {resultadoDivisao}"); // Exibindo o resultado da divisão
+calc.Potencia(2, 3, out resultadoPotencia); // Chamando o método Potencia da classe Calculadora
+Console.WriteLine($"Resultado da potência: {resultadoPotencia}"); // Exibindo o resultado da potência
+calc.RaizQuadrada(16, out resultadoRaizQuadrada); // Chamando o método RaizQuadrada da classe Calculadora
+Console.WriteLine($"Resultado da raiz quadrada: {Math.Round(resultadoRaizQuadrada, 4)}"); // Exibindo o resultado da raiz quadrada
+// Exemplo de uso de Incremento e Decremento
+int contador = 0; // Declarando uma variável do tipo inteiro para contador
+contador++; // Incrementando o contador em 1
+Console.WriteLine($"Contador após incremento: {contador}"); // Exibindo o valor do contador após o incremento
+contador--; // Decrementando o contador em 1
+Console.WriteLine($"Contador após decremento: {contador}"); // Exibindo o valor do contador após o decremento
+
+
 #endregion
