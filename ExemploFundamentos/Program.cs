@@ -436,13 +436,42 @@ foreach (string fruta in listaStrings) // Loop para percorrer os elementos da li
     Console.WriteLine($"Fruta: {fruta}"); // Exibindo o valor de cada fruta na lista
 }
 
-
-
-
-
-
-
-
-
-
 #endregion
+
+#region Comentarios e Boas Praticas
+// Comentários e Boas Práticas
+// Comentários são usados para explicar o código e torná-lo mais legível. Existem dois tipos de comentários em C#:
+// 1. Comentários de linha única: Iniciados com // e vão até o final da linha.
+// 2. Comentários de várias linhas: Iniciados com /* e terminados com */.
+// 3. Comentários XML: Usados para documentar classes, métodos e propriedades, iniciados com ///.
+// Exemplo de comentário de linha única
+// Este é um comentário de linha única, usado para explicar o código
+Console.WriteLine("Exemplo de comentário de linha única"); // Exibindo uma mensagem no console
+// Exemplo de comentário de várias linhas
+/* Este é um comentário de várias linhas,
+   usado para explicar o código em mais detalhes
+   ou para desativar temporariamente um bloco de código */
+Console.WriteLine("Exemplo de comentário de várias linhas"); // Exibindo uma mensagem no console
+// Exemplo de comentário XML
+/// <summary>
+/// Este método exibe uma mensagem no console.
+/// </summary>
+void ExibirMensagem()
+{
+    Console.WriteLine("Exemplo de comentário XML"); // Exibindo uma mensagem no console
+}
+// Chamada do método para exibir a mensagem
+ExibirMensagem(); // Chamando o método para exibir a mensagem
+                  // Boas práticas de programação
+                  // 1. Use nomes significativos para variáveis, métodos e classes.
+                  // 2. Mantenha o código limpo e organizado, com indentação adequada.
+                  // 3. Comente o código para explicar partes complexas ou importantes.
+                  // 4. Evite duplicação de código, reutilizando métodos quando possível.
+                  // 5. Use convenções de nomenclatura consistentes (camelCase para variáveis e métodos, PascalCase para classes).
+                  // 6. Teste o código regularmente para garantir que ele funcione conforme o esperado.
+                  // 7. Mantenha o código modular, dividindo-o em métodos e classes menores e mais gerenciáveis.
+                  // 8. Use controle de versão (como Git) para rastrear alterações no código e colaborar com outros desenvolvedores.
+                  // 9. Siga os princípios SOLID para design de software orientado a objetos.
+                  // 10. Mantenha-se atualizado com as melhores práticas e padrões da comunidade C#.
+#endregion
+// Fim do programa principal
