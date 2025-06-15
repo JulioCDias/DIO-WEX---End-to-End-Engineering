@@ -388,3 +388,61 @@ while (continuarr) // Iniciando o loop WHILE
     }
 }
 #endregion
+
+#region Arrays e Listas
+//exemplo de Array
+
+int[] arreyInteiros = new int[5]; // Declarando um array de inteiros com 5 elementos
+arreyInteiros[0] = 10; // Atribuindo o valor 10 ao primeiro elemento do array
+arreyInteiros[1] = 20; // Atribuindo o valor 20 ao segundo elemento do array
+arreyInteiros[2] = 30; // Atribuindo o valor 30 ao terceiro elemento do array
+arreyInteiros[3] = 40; // Atribuindo o valor 40 ao quarto elemento do array
+arreyInteiros[4] = 50; // Atribuindo o valor 50 ao quinto elemento do array
+Console.WriteLine("Elementos do array:"); // Exibindo a mensagem de início
+for (int i = 0; i < arreyInteiros.Length; i++) // Loop para percorrer os elementos do array
+{
+    Console.WriteLine($"Elemento {i}: {arreyInteiros[i]}"); // Exibindo o valor de cada elemento do array
+}
+
+int[] arreyInteiros2 = { 1, 2, 3, 4, 5 }; // Declarando e inicializando um array de inteiros com valores
+Console.WriteLine("Elementos do array 2:"); // Exibindo a mensagem de início
+for (int i = 0; i < arreyInteiros2.Length; i++) // Loop para percorrer os elementos do array
+{
+    Console.WriteLine($"Elemento {i}: {arreyInteiros2[i]}"); // Exibindo o valor de cada elemento do array
+}
+//Percorrendo um array com foreach
+foreach (int numeros in arreyInteiros2) // Loop para percorrer os elementos do array usando foreach
+{
+    Console.WriteLine($"Número: {numeros}"); // Exibindo o valor de cada número no array
+}
+// caso Precise aumentar o tamanho do array
+Array.Resize(ref arreyInteiros, 10); // Redimensionando o array para 10 elementos
+//Caso Precise copiar um array para outro
+int[] novoArray = new int[arreyInteiros.Length]; // Declarando um novo array com o mesmo tamanho do array original
+Array.Copy(arreyInteiros, novoArray, arreyInteiros.Length); // Copiando os elementos do array original para o novo array
+// Exibindo os elementos do novo array
+Console.WriteLine("Elementos do novo array:"); // Exibindo a mensagem de início
+for (int i = 0; i < novoArray.Length; i++) // Loop para percorrer os elementos do novo array
+{
+    Console.WriteLine($"Elemento {i}: {novoArray[i]}"); // Exibindo o valor de cada elemento do novo array
+}
+// Exemplo de uso de Listas
+List<string> listaStrings = new List<string>(); // Declarando uma lista de strings
+listaStrings.Add("Maçã"); // Adicionando "Maçã" à lista
+listaStrings.AddRange(new string[] { "Banana", "Laranja" }); // Adicionando múltiplos elementos à lista
+Console.WriteLine("Elementos da lista:"); // Exibindo a mensagem de início
+foreach (string fruta in listaStrings) // Loop para percorrer os elementos da lista
+{
+    Console.WriteLine($"Fruta: {fruta}"); // Exibindo o valor de cada fruta na lista
+}
+
+
+
+
+
+
+
+
+
+
+#endregion
