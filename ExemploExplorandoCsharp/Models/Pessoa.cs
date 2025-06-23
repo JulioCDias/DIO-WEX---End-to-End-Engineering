@@ -5,6 +5,17 @@ namespace ExemploExplorandoCsharp.Models;
 /// </summary>
 public class Pessoa // Classe Pessoa
 {
+    public Pessoa() // Construtor padrão da classe Pessoa
+    {
+        // Inicialização de propriedades ou campos pode ser feita aqui, se necessário
+    }
+
+    public Pessoa(string nome, string sobrenome, int idade) // Construtor com parâmetros
+    {
+        Nome = nome; // Atribui o nome passado como parâmetro à propriedade Nome
+        Sobrenome = sobrenome; // Atribui o sobrenome passado como parâmetro à propriedade Sobrenome
+        Idade = idade; // Atribui a idade passada como parâmetro à propriedade Idade
+    }
     private string _nome; // Campo privado para armazenar o nome da pessoa
     /// <summary>
     /// Propriedade Nome da pessoa.
@@ -29,6 +40,8 @@ public class Pessoa // Classe Pessoa
         }
     } //Propriedades tem getters e setters
 
+    public string Sobrenome { get; set; }
+    public string Nomecompleto => $"{Nome} {Sobrenome}"; // Propriedade Nomecompleto que concatena Nome e Sobrenome, somente getter
     private int _idade; // Campo privado para armazenar a idade da pessoa
     /// <summary>
     /// Propriedade Idade da pessoa.
@@ -50,6 +63,6 @@ public class Pessoa // Classe Pessoa
     /// </summary>
     public void Apresentar() // Método para apresentar a pessoa
     {
-        Console.WriteLine($"Olá, meu nome é {Nome} e tenho {Idade} anos.");
+        Console.WriteLine($"Olá, meu nome é {Nomecompleto} e tenho {Idade} anos.");
     }
 }
