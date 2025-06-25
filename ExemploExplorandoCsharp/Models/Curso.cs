@@ -49,11 +49,15 @@ public class Curso
         }
 
         Console.WriteLine($"Alunos do curso {Nome}:");
-        foreach (var aluno in Alunos)
+        for (int i = 0; i < Alunos.Count; i++)
         {
-            Console.WriteLine(aluno.Nomecompleto);
+            string texto = $"{i + 1}. {Alunos[i].Nomecompleto}"; //Concatenação de string
+            Console.WriteLine(texto); //Exibição do texto concatenado
+            Console.WriteLine("__________________________________________");
+            Console.WriteLine($"N*{i + 1}. {Alunos[i].Nomecompleto}"); //Interpolação de string
+            Console.WriteLine("__________________________________________");
+            Console.WriteLine(string.Format("N*{0}. {1}", i + 1, Alunos[i].Nomecompleto)); // Formatação de string
         }
     }
-
 
 }
