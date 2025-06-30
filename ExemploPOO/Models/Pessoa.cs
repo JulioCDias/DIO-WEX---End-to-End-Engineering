@@ -1,0 +1,14 @@
+namespace ExemploPOO.Models;
+
+public class Pessoa //exemplod e classe em C#, abstração de um objeto do mundo real
+{
+    public string Nome { get; set; } //propriedade Nome do tipo string
+    // Propriedade Idade do tipo int
+
+    public int Idade { get; set; }
+
+    public void Apresentar() //método que imprime uma mensagem de apresentação
+    {
+        Console.WriteLine($"Olá, meu nome é {Nome} e tenho {Idade} anos.");
+    }
+}
