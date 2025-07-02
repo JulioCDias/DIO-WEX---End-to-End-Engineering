@@ -1,7 +1,15 @@
 namespace ExemploPOO.Models;
 
-public class Pessoa //exemplod e classe em C#, abstração de um objeto do mundo real
+public class Pessoa //exemplo de classe em C#, abstração de um objeto do mundo real
 {
+    public Pessoa()
+    {
+
+    }
+    public Pessoa(string nome)
+    {
+        Nome = nome;
+    }
     public string Nome { get; set; } //propriedade Nome do tipo string
     // Propriedade Idade do tipo int
 
