@@ -7,7 +7,7 @@ public class Pessoa //exemplod e classe em C#, abstração de um objeto do mundo
 
     public int Idade { get; set; }
 
-    public void Apresentar() //método que imprime uma mensagem de apresentação
+    public virtual void Apresentar() //método que imprime uma mensagem de apresentação, virtual indica que pode ser sobreescrito
     {
         Console.WriteLine($"Olá, meu nome é {Nome} e tenho {Idade} anos.");
     }

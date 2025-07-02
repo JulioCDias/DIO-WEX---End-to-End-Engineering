@@ -9,3 +9,19 @@ p1.Apresentar();
 ContaCorrente conta = new ContaCorrente(12345, 1000.00m); // Cria uma instância da classe ContaCorrente com número de conta 12345 e saldo inicial de 1000.00
 conta.Sacar(200.00m); // Chama o método Sacar da instância conta, tentando sacar 200.00 do saldo
 conta.ExibirSaldo();
+
+Aluno a1 = new Aluno();
+a1.Nome = "Julio";
+a1.Idade = 30;
+a1.Nota = 8.5f;
+
+
+a1.Apresentar();
+Console.WriteLine($"Nota: {a1.Nota}");
+
+Professor prof1 = new Professor();
+prof1.Nome = "João";
+prof1.Idade = 30;
+prof1.Salario = 5000.00d;
+prof1.Apresentar();
+Console.WriteLine($"Salário: {prof1.Salario}");
