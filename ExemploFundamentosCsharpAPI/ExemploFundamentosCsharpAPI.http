@@ -1,0 +1,8 @@
+@ExemploFundamentosCsharpAPI_HostAddress = http://localhost:5062
+
+GET {{ExemploFundamentosCsharpAPI_HostAddress}}/usuario/
+Accept: application/json
+
+###
+GET {{ExemploFundamentosCsharpAPI_HostAddress}}/usuario/ObterDataHoraAtual
+Accept: application/json
